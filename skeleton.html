@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="skeleton.css">
+   <style>
+    
+.body {
+    display: none;
+}
+
+/* Style the body div when it is visible */
+.body.visible {
+    display: flex;
+}
+   </style>
+    <title>Document</title>
+</head>
+<body>
+    <div>
+    <div >
+      <p class="click" onclick="display()"><label for="" style="margin-left: 10px;">DANCE WITH ME</label><br><label for="" style="margin-left: 10PX;">TOUCH ME⬇️</label><br><br>
+        <img src="skleton.jpeg" alt=""></p>
+    </div>
+    <div class="body" id="bodyDiv">
+       <div class="circle">
+        <div class="eye1"></div>
+        <div class="eye2"></div>
+        <div class="nose"></div>
+        <div class="mouth"></div>
+       </div>
+       <div class="stomach">
+        <div class="shoulder1"></div>
+        <div class="shoulder2"></div>
+       </div>
+       <div class="hand1"></div>
+       <div class="hand2"></div>
+       <div class="leg1"></div>
+       <div class="leg2"></div>
+       <br><br>
+       <!-- Add this button within the body tag -->
+<button onclick="changeAnimation()">Change Dance</button>
+
+   </div>
+
+   <script>
+   
+    var currentAnimationIndex = 0;
+
+    function display() {
+        var bodyDiv = document.getElementById('bodyDiv');
+        bodyDiv.classList.toggle('visible');
+    }
+
+    function changeAnimation() {
+        var hand1 = document.querySelector('.hand1');
+        var hand2 = document.querySelector('.hand2');
+        var leg1 = document.querySelector('.leg1');
+        var leg2 = document.querySelector('.leg2');
+
+        // List of animation sets
+        var animations = [
+            ['newAnimationHand1', 'newAnimationHand2', 'newAnimationLeg1', 'newAnimationLeg2'],
+            ['newAnimationHand1_2', '2newAnimationHand2_2', '2newAnimationLeg1_2', '2newAnimationLeg2_2'],
+            // Add more animation sets as needed
+        ];
+
+        // Toggle the classes for the current animation set
+        animations[currentAnimationIndex].forEach(className => {
+            hand1.classList.toggle(className);
+            hand2.classList.toggle(className);
+            leg1.classList.toggle(className);
+            leg2.classList.toggle(className);
+        });
+
+        // Increment the index for the next animation set
+        if(currentAnimationIndex+1>=animations.length)
+        {
+        currentAnimationIndex=0;
+        }
+        else{
+        currentAnimationIndex = currentAnimationIndex+1;
+        }
+    }
+
+   </script>
+</body>
+</html>

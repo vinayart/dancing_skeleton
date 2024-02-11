@@ -1,0 +1,229 @@
+body{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.circle{
+    border-radius: 40px;
+    width: 50px;
+    height: 50px;
+    background-color: aqua;
+
+}
+.eye1{
+    width: 10px;
+    height: 10px;
+    border-radius: 6px;
+    background-color: black;
+    margin-top: 12px;
+    margin-left: 9px;
+}
+.eye2{
+    width: 10px;
+    height: 10px;
+    border-radius: 6px;
+    background-color: black;
+    margin-top: -10px;
+    margin-left: 29px;
+}
+.nose{
+    width: 4px;
+    height: 5px;
+    background-color: black;
+    margin-left: 23px;
+    margin-top: 3px;
+}
+.mouth{
+    width: 15px;
+    height: 3px;
+    background-color: black;
+    margin-left: 17.5px;
+    margin-top: 7px;
+  border-radius: 4px 4px;
+
+
+}
+
+.body{
+    align-items: center;
+    align-content: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
+}
+
+.stomach{
+    border-radius: 20px;
+    width: 50px;
+    height: 70px;
+    background-color: aqua;
+}
+
+.hand1,.hand2 {
+    width: 15px;
+    height: 50px;
+    background-color: aqua;
+    border-radius: 10px;
+}
+
+.hand1 {
+    margin-top: -62px;
+    margin-left: 65px;
+    animation: moveHand1 2s infinite;
+
+    transform-origin:top;
+}
+
+.hand2 {
+    margin-top: -50px;
+    margin-right: 65px;
+    animation: moveHand2 2s infinite;
+
+    transform-origin: top;
+
+}
+.leg1,.leg2{
+    width: 18px;
+    height: 70px;
+    background-color: aqua;
+    border-radius: 20px;
+}
+.leg1{
+    margin-left: -20px;
+    margin-top: 10px;
+    animation: moveleg1 2s infinite;
+
+    transform-origin: top;
+}
+.leg2{
+    margin-right: -27px;
+    margin-top: -70px;
+    animation: moveleg2 2s infinite;
+
+    transform-origin: top;
+}
+
+@keyframes moveHand1 {
+    0% { transform: rotate(-90deg); }
+    50% { transform: rotate(0deg); }
+    100% { transform: rotate(-90deg); }
+}
+
+@keyframes moveHand2 {
+    0% { transform: rotate(90deg); }
+    50% { transform: rotate(0deg); }
+    100% { transform: rotate(90deg); }
+}
+@keyframes moveleg1 {
+    0% { transform: rotate(30deg); }
+    50% { transform: rotate(0deg); }
+    100% { transform: rotate(30deg); }
+}
+@keyframes moveleg2 {
+    0% { transform: rotate(-30deg); }
+    50% { transform: rotate(0deg); }
+    100% { transform: rotate(-30deg); }
+}
+
+.shoulder1,.shoulder2{
+    width: 15px;
+    height: 7px;
+    background-color: aqua;
+    border-radius: 8px;
+
+}
+.shoulder1{
+    margin-left: -8px;
+    margin-top: 6px;
+}
+.shoulder2{
+    margin-left: 43px;
+    margin-top: -6px;
+}
+/* ... Your existing CSS ... */
+
+@keyframes newAnimationHand1 {
+    0% { transform: rotate(45deg); }
+    50% { transform: rotate(0deg); }
+    100% { transform: rotate(45deg); }
+}
+
+@keyframes newAnimationHand2 {
+    0% { transform: rotate(-45deg); }
+    50% { transform: rotate(0deg); }
+    100% { transform: rotate(-45deg); }
+}
+
+@keyframes newAnimationLeg1 {
+    0% { transform: rotate(45deg); }
+    50% { transform: rotate(0deg); }
+    100% { transform: rotate(45deg); }
+}
+
+@keyframes newAnimationLeg2 {
+    0% { transform: rotate(-45deg); }
+    50% { transform: rotate(0deg); }
+    100% { transform: rotate(-45deg); }
+}
+
+/* Add the following lines to apply the animation property */
+.newAnimationHand1 {
+    animation: newAnimationHand1 2s infinite;
+}
+
+.newAnimationHand2 {
+    animation: newAnimationHand2 2s infinite;
+}
+
+.newAnimationLeg1 {
+    animation: newAnimationLeg1 2s infinite;
+}
+
+.newAnimationLeg2 {
+    animation: newAnimationLeg2 2s infinite;
+}
+
+
+
+@keyframes newAnimationHand1_2 {
+    0% { transform: rotate(180deg); }
+    50% { transform: rotate(0deg); }
+    100% { transform: rotate(180deg); }
+}
+
+@keyframes newAnimationHand2_2 {
+    0% { transform: rotate(-180deg); }
+    50% { transform: rotate(0deg); }
+    100% { transform: rotate(-180deg); }
+}
+
+@keyframes newAnimationLeg1_2 {
+    0% { transform: rotate(-90deg); }
+    50% { transform: rotate(0deg); }
+    100% { transform: rotate(-45deg); }
+}
+
+@keyframes newAnimationLeg2_2 {
+    0% { transform: rotate(90deg); }
+    50% { transform: rotate(0deg); }
+    100% { transform: rotate(45deg); }
+}
+
+/* Add the following lines to apply the animation property */
+.newAnimationHand1_2 {
+    animation: newAnimationHand1_2 2s infinite;
+}
+
+.newAnimationHand2_2 {
+    animation: newAnimationHand2_2 2s infinite;
+}
+
+.newAnimationLeg1_2 {
+    animation: newAnimationLeg1_2 2s infinite;
+}
+
+.newAnimationLeg2_2 {
+    animation: newAnimationLeg2_2 2s infinite;
+}
+
+
